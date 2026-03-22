@@ -4,54 +4,62 @@ padding:0;
 box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
+
 body{
+
 background:#0b0b0b;
 height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
 color:white;
+
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+align-items:center;
+
+padding-bottom:40px;
+
 }
-/* Center Container */
-.container{
-width:100%;
-text-align:center;
-}
-/* Hello Text */
+
+/* Hello text */
+
 #hello{
+
 font-size:60px;
-font-weight:300;
-opacity:0.85;
-
-margin-bottom:50px;
-
-transition:0.4s ease;
+margin-bottom:120px;
+opacity:0.9;
 
 }
 
-/* Search Box */
+/* Container for mic + search + send */
+
+.searchContainer{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+width:90%;
+max-width:600px;
+
+}
+
+/* Search bar */
 
 .searchBox{
 
-width:60%;
-margin:auto;
-
-display:flex;
-align-items:center;
+flex:1;
 
 background:#111;
 
-padding:10px;
-
 border-radius:40px;
 
-/* Neon glow */
+padding:12px 20px;
 
 box-shadow:
 
-0 0 5px #00f7ff,
-0 0 15px #00f7ff,
-0 0 30px #00f7ff;
+0 0 10px #00f7ff,
+0 0 25px #00f7ff,
+0 0 50px #00f7ff;
 
 }
 
@@ -59,7 +67,7 @@ box-shadow:
 
 .searchBox input{
 
-flex:1;
+width:100%;
 
 background:transparent;
 border:none;
@@ -68,37 +76,41 @@ outline:none;
 color:white;
 
 font-size:16px;
-padding:10px;
 
 }
 
-/* Buttons */
+/* Mic and Send Buttons */
 
-.searchBox button{
+button{
 
-background:transparent;
+background:#111;
 border:none;
 
 color:white;
 
 font-size:18px;
 
-cursor:pointer;
-
-margin-left:10px;
-
-padding:8px;
+width:45px;
+height:45px;
 
 border-radius:50%;
 
-transition:0.2s;
+cursor:pointer;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:
+
+0 0 10px #00f7ff,
+0 0 20px #00f7ff;
 
 }
 
-.searchBox button:hover{
+button:hover{
 
-transform:scale(1.2);
-
+transform:scale(1.1);
 color:#00f7ff;
 
 }
